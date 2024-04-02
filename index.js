@@ -25,6 +25,6 @@ app.post('/api/login', (req, res) => {
   res.json({ mensaje: 'Datos recibidos correctamente', datos });
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
